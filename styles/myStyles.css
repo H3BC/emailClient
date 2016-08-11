@@ -1,0 +1,55 @@
+li {
+  list-style: none;
+  margin-left: -39px;
+  border-bottom: 1px dotted black; }
+
+header {
+  height: 100px;
+  width: 100%;
+  font-size: 2.8rem;
+  background: #252839;
+  color: #FFFFFF; }
+  header .btn {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+
+#left-col, #right-col {
+  padding: 0;
+  margin: -10px 0 0 0;
+  height: 100vh;
+  background: #f3bb40; }
+
+#left-col {
+  border-right: 1px solid #f2b632; }
+  #left-col .content {
+    padding-left: 25px;
+    padding-top: 8%;
+    font-size: 21px;
+    text-align: center; }
+
+#right-col {
+  background: #dcdcdd;
+  overflow: scroll; }
+  #right-col .content {
+    padding: 10px; }
+
+.chooseOption {
+  height: 75px;
+  background: #e3a00e;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+  .chooseOption:hover {
+    background: #f5c762; }
+
+.emailList {
+  background: #FFFFFF;
+  width: 104%; }
+  .emailList .btnscd {
+    margin-left: 10px; }
+
+/*# sourceMappingURL=myStyles.css.map */

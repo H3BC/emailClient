@@ -1,0 +1,76 @@
+$color-left: #f2b632;
+$color-right: #b5b5b7;
+$color-head: #252839;
+$white: #FFFFFF;
+
+@mixin transition($time){
+	-webkit-transition: all $time;
+    -moz-transition: all $time;
+    -o-transition: all $time;
+    transition: all $time;
+}
+
+li{
+	list-style: none;
+ 	margin-left: -39px;
+ 	border-bottom: 1px dotted black;
+}
+
+header{
+	height: 100px;
+	width: 100%;
+	font-size: 2.8rem;
+	background: $color-head;
+	color: $white;
+	.btn{
+		@include transition(0.5s);
+	}
+}
+
+#left-col, #right-col{
+	padding: 0;
+	margin: -10px 0 0 0;
+	height: 100vh;
+	background: lighten($color-left, 3%);
+
+}
+
+#left-col{
+	border-right: 1px solid $color-left;
+	.content{
+		padding-left: 25px;
+		padding-top: 8%;
+		font-size: 21px;
+		text-align: center;
+	}
+}
+
+#right-col{
+	background: lighten($color-right,15%);
+	overflow: scroll;
+	.content{
+		padding: 10px;
+	}
+}
+.chooseOption{
+	height: 75px;
+	background: darken($color-left, 10%);
+	width: 100%;
+
+	@include transition(0.5s);
+
+	&:hover{
+		background: lighten($color-left, 10%);
+	};
+
+}
+
+.emailList{
+	background: $white;
+	width: 104%;
+	.btnscd{
+		margin-left: 10px;
+
+	}
+
+}
