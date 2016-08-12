@@ -16,6 +16,13 @@ header {
     transition: all 0.5s;
     margin-right: 25px; }
 
+textarea {
+  resize: none; }
+
+#banner {
+  padding-top: 15px;
+  vertical-align: middle; }
+
 #left-col, #right-col {
   padding: 0;
   margin: -10px 0 0 0;
@@ -63,5 +70,19 @@ header {
       width: 100px; }
     .modal-content input #subject {
       width: 10px; }
+
+#emailContent {
+  padding: 20px;
+  padding-top: 55px; }
+  #emailContent #emailDetails {
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black; }
+  #emailContent #emailText {
+    padding-top: 15px; }
+  #emailContent #replyEmail {
+    width: 70%;
+    padding-bottom: 30px; }
+  #emailContent #messageBottom {
+    border-top: 1px dotted black; }
 
 /*# sourceMappingURL=myStyles.css.map */

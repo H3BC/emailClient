@@ -28,6 +28,16 @@ header{
 	}
 }
 
+textarea {
+   resize: none;
+}
+
+#banner{
+	padding-top: 15px;
+  	vertical-align: middle;
+  	
+}
+
 #left-col, #right-col{
 	padding: 0;
 	margin: -10px 0 0 0;
@@ -91,5 +101,28 @@ header{
 		 	width: 10px;
 		}
 
+	}
+}
+
+#emailContent{
+	padding: 20px;
+	padding-top: 55px;
+
+	#emailDetails{
+
+		border-top: 1px dotted black;
+		border-bottom: 1px dotted black;
+	}
+
+	#emailText{
+		padding-top: 15px;
+	}
+
+	#replyEmail{
+		width: 70%;
+		padding-bottom: 30px;
+	}
+	#messageBottom{
+		border-top: 1px dotted black;
 	}
 }

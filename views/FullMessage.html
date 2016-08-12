@@ -1,0 +1,48 @@
+<div id="emailContent">
+	<div id="emailDetails">
+	<br>
+	(Sender's email)<br>
+	(Subject)<br><br>
+	<button class="btn btn-md btn-success" ng-click="switch = true">Reply</button>&nbsp
+	<button class="btn btn-md btn-danger">Delete</button>
+	<button class="btn btn-md btn-warning pull-right">Mark as a spam</button>
+	<br><br>
+
+	</div>
+	<div id="emailText">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<br><br><br>
+	<div id="replyEmail" ng-show="switch">
+	<label for="#sendTo">To:</label><input type="text" class="form-control" id="sendTo" placeholder="Sender's email" disabled>
+	<label for="#mailTopic">Subject:</label><input type="text" class="form-control" id="mailTopic" placeholder="Re: subject">
+	<br>
+	<textarea cols="100" rows="7"></textarea>
+	<br>
+	<br>
+	<button class="btn btn-md btn-success">Send</button>&nbsp &nbsp<button class="btn btn-md btn-default" ng-click="switch=false">Cancel</button>
+	</div>
+<div id="messageBottom">
+<br><br>
+<button class="btn btn-md btn-info">↵ Back</button>
+</div>
+</div>

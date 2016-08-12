@@ -1,62 +1,8 @@
-<ul>
+<ul ng-repeat="email in receivedArr">
 			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
+				From: {{email.author}} <br>
+				{{email.date}}<br>
+				{{email.subject}}<br>
+				<a href="#/message" class="btn btn-sm btn-info">Read</a> <div class="btn btn-sm btn-danger btnscd">Delete</div>
 			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-		</ul>
+</ul>

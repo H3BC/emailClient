@@ -3,7 +3,7 @@ var app = angular.module('emailApp', ['ngRoute'])
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/',{
-		templateUrl: '/views/received',
+		templateUrl: '/views/received.html',
 		controller: 'MailCtrl'
 	})
 	.when('/recived', {
@@ -26,6 +26,11 @@ app.config(function($routeProvider){
 		controller: 'MailCtrl' 
 		
 		 })
+	.when('/message', {
+		templateUrl: '/views/FullMessage.html',
+		controller: 'MailCtrl' 
+		
+		 })
 
 	.otherwise({
 		redirectTo: '/'
@@ -33,6 +38,3 @@ app.config(function($routeProvider){
 
 });
 
-app.controller('MailCtrl', function($scope){
-	$scope.data = "Hello";
-});

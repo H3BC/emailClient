@@ -11,10 +11,10 @@
 
 	
 	</head>
-	<body ng-app="emailApp">
+	<body ng-app="emailApp" ng-controller="MailCtrl">
 		
 	<header>
-	<div class="text-center">Email Client</div>
+	<div class="text-center" id="banner">Email Client</div>
 	<div class="btn btn-md btn-info pull-right" data-toggle="modal" data-target="#emailModal">Write an Email</div>
 
 	<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -44,40 +44,40 @@
 </div>
 	</header>
 
-	<div class="row" ng-controller="MailCtrl">
+	<div class="row">
 
 	<!-- LEFT SIDE -->
 		<div id="left-col" class="col-xs-3">
 			<div class="chooseOption">
 			<a href="#/received">
 				<div class="content">
-					<span style="color: black" class="glyphicon glyphicon-folder-open"> Received ()</span> 
+					<span style="color: black" class="glyphicon glyphicon-folder-open"> Received ({{receivedArr.length}})</span> 
 				</div>
 			</a>
 			</div>
 			<div class="chooseOption">
 				<a href="#/sended">
 					<div class="content">
-						<span style="color: black" class="glyphicon glyphicon-envelope"> Sended ()</span> 
+						<span style="color: black" class="glyphicon glyphicon-envelope"> Sended ({{sendedArr.length}})</span> 
 					</div>
 				</a>
 			</div>
 			<div class="chooseOption">
 				<a href="#/removed">
 					<div class="content">
-						<span style="color: black" class="glyphicon glyphicon-remove"> Removed ()</span> 
+						<span style="color: black" class="glyphicon glyphicon-remove"> Removed ({{removedArr.length}})</span> 
 					</div>
 				</a>
 			</div>
 			<div class="chooseOption">
 				<a href="#/spam">
 					<div class="content">
-						<span style="color: black" class="glyphicon glyphicon-trash"> SPAM ()</span> 
+						<span style="color: black" class="glyphicon glyphicon-trash"> SPAM ({{spamArr.length}})</span> 
 					</div>
 				</a>
 			</div>
 			<div class="chooseOption">
-				<a href="#/settings">
+				<a href="#">
 					<div class="content">
 						<span style="color: black" class="glyphicon glyphicon-cog"> Settings</span> 
 					</div>
@@ -102,6 +102,8 @@
     	<!-- APLICATION SCRIPTS -->
 
     	<script src="js/app.js"></script>
+    	<script src="js/controllers/MailCtrl.js"></script>
+    	<script src="js/controllers/DashboardCtrl.js"></script>
 
 
 	</body>
