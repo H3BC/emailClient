@@ -1,4 +1,4 @@
-app.controller('MailCtrl', function($scope){
+app.controller('MailCtrl', function($scope,$rootScope){
 
 	// INITIALIZING EMAIL ARRAYS
 	$scope.receivedArr = [{'author': 'John@example.com','subject': 'I have to tell you...', 'date': '21.09.2015', 'content': ''},
@@ -15,6 +15,22 @@ app.controller('MailCtrl', function($scope){
 	$scope.sendedArr = [];
 
 	$scope.switch = false;
+	
+
+
+
+	$scope.readMail = function(author,subject,date,backLink){
+		
+		$rootScope.author = author;
+		$rootScope.subject = subject;
+		$rootScope.date = date;
+		$rootScope.backLink = backLink;
+
+	}
+
+	$scope.mailContent = "dupadupadupa"
+	
+	
 
 
 });

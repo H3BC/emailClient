@@ -1,8 +1,9 @@
 <div id="emailContent">
 	<div id="emailDetails">
 	<br>
-	(Sender's email)<br>
-	(Subject)<br><br>
+	From: {{author}}<br>
+	{{subject}}<br>
+	{{date}}<br><br>
 	<button class="btn btn-md btn-success" ng-click="switch = true">Reply</button>&nbsp
 	<button class="btn btn-md btn-danger">Delete</button>
 	<button class="btn btn-md btn-warning pull-right">Mark as a spam</button>
@@ -33,16 +34,17 @@
 	</div>
 	<br><br><br>
 	<div id="replyEmail" ng-show="switch">
-	<label for="#sendTo">To:</label><input type="text" class="form-control" id="sendTo" placeholder="Sender's email" disabled>
-	<label for="#mailTopic">Subject:</label><input type="text" class="form-control" id="mailTopic" placeholder="Re: subject">
+	<label for="#sendTo">To:</label><input type="text" class="form-control" id="sendTo" value="{{author}}" disabled>
+	<label for="#mailTopic">Subject:</label><input type="text" class="form-control" id="mailTopic" value="Re: {{subject}}">
 	<br>
 	<textarea cols="100" rows="7"></textarea>
 	<br>
 	<br>
 	<button class="btn btn-md btn-success">Send</button>&nbsp &nbsp<button class="btn btn-md btn-default" ng-click="switch=false">Cancel</button>
 	</div>
+	
 <div id="messageBottom">
 <br><br>
-<button class="btn btn-md btn-info">↵ Back</button>
+<a href={{backLink}} class="btn btn-md btn-info">↵ Back</a>
 </div>
 </div>
