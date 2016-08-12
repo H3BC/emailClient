@@ -13,7 +13,8 @@ header {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
-    transition: all 0.5s; }
+    transition: all 0.5s;
+    margin-right: 25px; }
 
 #left-col, #right-col {
   padding: 0;
@@ -51,5 +52,16 @@ header {
   width: 104%; }
   .emailList .btnscd {
     margin-left: 10px; }
+
+.modal-content {
+  color: black; }
+  .modal-content label {
+    font-size: 15px; }
+  .modal-content input {
+    height: 20px; }
+    .modal-content input #address {
+      width: 100px; }
+    .modal-content input #subject {
+      width: 10px; }
 
 /*# sourceMappingURL=myStyles.css.map */

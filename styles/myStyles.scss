@@ -24,6 +24,7 @@ header{
 	color: $white;
 	.btn{
 		@include transition(0.5s);
+		margin-right: 25px;
 	}
 }
 
@@ -73,4 +74,22 @@ header{
 
 	}
 
+}
+
+.modal-content{
+	color: black;
+	label{
+		font-size: 15px;
+	}
+	input{
+		height: 20px;
+		
+		#address{
+			width: 100px;
+		}
+		#subject{
+		 	width: 10px;
+		}
+
+	}
 }

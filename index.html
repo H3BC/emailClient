@@ -4,122 +4,105 @@
 	<meta charset="UTF-8">
 	<title>Mail Client</title>
 	
-	<link rel="stylesheet" href="styles/bootstrap.min.css">
-	<link rel="stylesheet" href="styles/myStyles.css">
+	<link rel="stylesheet" href="/styles/bootstrap.min.css">
+	<link rel="stylesheet" href="/styles/myStyles.css">
 
 
 
 	
 	</head>
-	<body>
+	<body ng-app="emailApp">
 		
 	<header>
 	<div class="text-center">Email Client</div>
-	<div class="btn btn-md btn-info pull-right">Write an Email</div>
+	<div class="btn btn-md btn-info pull-right" data-toggle="modal" data-target="#emailModal">Write an Email</div>
+
+	<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add a message</h4>
+      </div>
+      <div class="modal-body">
+      <form class="form-inline">
+     <label for="#address">To: </label> <input type="text" class="form-control" size="20" id="address">
+     <label for="#topic">Topic: </label> <input type="text" class="form-control" size="20" id="topic"><br>
+     <label for="#textMessage">Message:</label>
+     <textarea id="textMessage" cols="33" rows="4"></textarea>
+
+     </form>
+      
+      <div class="modal-footer">
+      
+        <button type="button" class="btn btn-default pull-right btn-lg" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success pull-left btn-lg">Send</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
 	</header>
 
-	<div class="row">
+	<div class="row" ng-controller="MailCtrl">
 
 	<!-- LEFT SIDE -->
 		<div id="left-col" class="col-xs-3">
 			<div class="chooseOption">
+			<a href="#/received">
 				<div class="content">
-				<span class="glyphicon glyphicon-folder-open"> Recived ()</span> 
+					<span style="color: black" class="glyphicon glyphicon-folder-open"> Received ()</span> 
 				</div>
+			</a>
 			</div>
 			<div class="chooseOption">
-				<div class="content">
-			<span class="glyphicon glyphicon-envelope"> Sended ()</span> 
-				</div>
+				<a href="#/sended">
+					<div class="content">
+						<span style="color: black" class="glyphicon glyphicon-envelope"> Sended ()</span> 
+					</div>
+				</a>
 			</div>
 			<div class="chooseOption">
-				<div class="content">
-					<span class="glyphicon glyphicon-remove"> Deleted ()</span> 
-				</div>
+				<a href="#/removed">
+					<div class="content">
+						<span style="color: black" class="glyphicon glyphicon-remove"> Removed ()</span> 
+					</div>
+				</a>
 			</div>
 			<div class="chooseOption">
-				<div class="content">
-					<span class="glyphicon glyphicon-trash"> SPAM ()</span> 
-				</div>
+				<a href="#/spam">
+					<div class="content">
+						<span style="color: black" class="glyphicon glyphicon-trash"> SPAM ()</span> 
+					</div>
+				</a>
+			</div>
+			<div class="chooseOption">
+				<a href="#/settings">
+					<div class="content">
+						<span style="color: black" class="glyphicon glyphicon-cog"> Settings</span> 
+					</div>
+				</a>
 			</div>
 		</div>
 
 		<!-- RIGHT SIDE -->
 
-		<div id="right-col" class="col-xs-9">
-		<ul>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-			<li class="emailList content">
-				From: (author) <br>
-				(date)<br>
-				(subject)<br>
-				<div class="btn btn-sm btn-danger">Read</div> <div class="btn btn-sm btn-danger btnscd">Delete</div>
-			</li>
-		</ul>
+		<div id="right-col" ng-view class="col-xs-9">
+		
 			
 		</div>
 	</div>
 
+		  <!-- REQUIRED LIBRARIES -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
    		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
-    	<script src="js/bootstrap.min.js"></script>
-    	<script>
-    		
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    	<script src="/js/bootstrap.min.js"></script>
 
-    	</script>
+    	<!-- APLICATION SCRIPTS -->
+
+    	<script src="js/app.js"></script>
+
+
 	</body>
 </html>
