@@ -1,0 +1,9 @@
+<ul ng-repeat="email in sendedArr">
+			<li class="emailList content">
+				From: {{email.author}} <br>
+				{{email.date}}<br>
+				{{email.subject}}<br>
+				<a href="#/message" class="btn btn-sm btn-info" ng-click="readMail(email.author,email.subject,email.date,'#/received')" >Read</a>
+				<div class="btn btn-sm btn-danger btnscd">Delete</div>
+			</li>
+</ul>

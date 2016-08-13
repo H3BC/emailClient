@@ -4,26 +4,26 @@ app.config(function($routeProvider){
 	$routeProvider
 	.when('/',{
 		templateUrl: '/views/received.html',
-		controller: 'MailCtrl'
+		controller: 'receivedCTRL'
 	})
 	.when('/recived', {
 		templateUrl: '/views/received.html' ,
-		controller: 'MailCtrl'
+		controller: 'receivedCTRL'
 		
 		 })
 	.when('/sended', {
 		templateUrl: '/views/sended.html',
-		controller: 'MailCtrl' 
+		controller: 'sendedCTRL' 
 		
 		 })
 	.when('/spam', {
 		templateUrl: '/views/spam.html',
-		controller: 'MailCtrl' 
+		controller: 'spamCTRL' 
 		
 		 })
 	.when('/removed', {
 		templateUrl: '/views/removed.html',
-		controller: 'MailCtrl' 
+		controller: 'removedCTRL' 
 		
 		 })
 	.when('/message', {
