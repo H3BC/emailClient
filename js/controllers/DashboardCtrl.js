@@ -5,5 +5,9 @@ app.controller('DashboardCtrl', function($scope,emailArraysFactory){
 	$scope.spam = emailArraysFactory.spamArr;
 	$scope.removed = emailArraysFactory.removedArr;
 
+	$scope.info = function(){
+		alert('available soon');
+	}
+
 
 });

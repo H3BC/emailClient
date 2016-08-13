@@ -7,12 +7,14 @@ app.controller('receivedCTRL', function($scope,$rootScope,emailArraysFactory){
 
 	
 	
-	$scope.readMail = function(author,subject,date,backLink){
+	$scope.readMail = function(author,subject,date,content,backLink){
 		
 		$rootScope.author = author;
 		$rootScope.subject = subject;
 		$rootScope.date = date;
+		$rootScope.content = content;
 		$rootScope.backLink = backLink;
+		
 
 	}
 

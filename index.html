@@ -13,7 +13,7 @@
 	</head>
 	<body ng-app="emailApp">
 		
-	<header>
+	<header ng-controller="MailCtrl">
 	<div class="text-center" id="banner">Email Client</div>
 	<div class="btn btn-md btn-info pull-right" data-toggle="modal" data-target="#emailModal">Write an Email</div>
 
@@ -25,6 +25,8 @@
         <h4 class="modal-title" id="myModalLabel">Add a message</h4>
       </div>
       <div class="modal-body">
+
+     <!--  SENDING MAIL FORM  --> 
       <form class="form-inline">
      <label for="#address">To: </label> <input ng-model="SendAuthor" type="text" class="form-control" size="20" id="address">
      <label for="#topic">Topic: </label> <input  ng-model="SendSubject" type="text" class="form-control" size="20" id="topic"><br>
@@ -35,8 +37,8 @@
       
       <div class="modal-footer">
       
-        <button type="button" class="btn btn-default pull-right btn-lg">Close</button>
-        <button type="button" class="btn btn-success pull-left btn-lg">Send</button>
+        <button type="button" class="btn btn-default pull-right btn-lg" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success pull-left btn-lg" ng-click="sendMail()">Send</button>
       
       </div>
     </div>
@@ -79,7 +81,7 @@
 			<div class="chooseOption">
 				<a href="#">
 					<div class="content">
-						<span style="color: black" class="glyphicon glyphicon-cog"> Settings</span> 
+						<span style="color: black" ng-click="info()" class="glyphicon glyphicon-cog"> Settings</span> 
 					</div>
 				</a>
 			</div>
@@ -108,6 +110,7 @@
     	<script src="js/controllers/spamCTRL.js"></script>
     	<script src="js/controllers/sendedCTRL.js"></script>  
     	<script src="js/controllers/DashboardCtrl.js"></script>
+    	<script src="js/factories/provideTime.js"></script>
     	<script src="js/factories/emailArraysFactory.js"></script>
 
 
