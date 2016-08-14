@@ -1,3 +1,7 @@
+<div ng-show="sendedArr.length == 0" class="emailList content">
+	<center>No new messeges</center>
+</div>
+
 <ul ng-repeat="email in sendedArr track by $index">
 			<li class="emailList content">
 				From: {{email.author}} <br>

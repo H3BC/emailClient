@@ -14,8 +14,6 @@ app.factory('emailArraysFactory',function(){
 
 		_sendedArr = [];
 
-		
-
 	return{
 		receivedArr : _receivedArr,
 
@@ -28,18 +26,3 @@ app.factory('emailArraysFactory',function(){
 	}
 })
 
-
-app.factory('deleteEmail', function(emailArraysFactory){
-
-	_remove = function(index, array){
-	
-	var cutedObject = emailArraysFactory[array][index];
-	emailArraysFactory[array].splice(index,1);
-	emailArraysFactory.removedArr.push(cutedObject);
-
-
-		}
-	return{
-		remove: _remove
-	}
-})

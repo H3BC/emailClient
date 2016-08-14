@@ -2,14 +2,7 @@ app.controller('removedCTRL', function($scope,$rootScope,emailArraysFactory){
 
 	// INITIALIZING EMAIL ARRAYS
 
-	$scope.removedArr = emailArraysFactory.removedArr;
-
-	
-
-	$scope.switch = false;
-
-	
-	
+	$scope.removedArr = emailArraysFactory.removedArr;	
 
 
 

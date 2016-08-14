@@ -5,10 +5,10 @@
 	{{subject}}<br>
 	{{date}}<br><br>
 	<button class="btn btn-md btn-success" ng-click="switch = true">Reply</button>&nbsp
-	<button class="btn btn-md btn-danger">Delete</button>
-	<button class="btn btn-md btn-warning pull-right">Mark as a spam</button>
+	<a ng-href={{backLink}} class="btn btn-md btn-danger" ng-click="delete(index,array)">Delete</a>
+	<a ng-href={{backLink}} class="btn btn-md btn-warning pull-right" ng-click="spam(index,array)">Mark as a spam</a>
 	<br><br>
-
+	
 	</div>
 	<div id="emailText">
 		{{content}}
@@ -26,6 +26,6 @@
 	
 <div id="messageBottom">
 <br><br>
-<a href={{backLink}} class="btn btn-md btn-info">↵ Back</a>
+<a ng-href={{backLink}} class="btn btn-md btn-info">↵ Back</a>
 </div>
 </div>

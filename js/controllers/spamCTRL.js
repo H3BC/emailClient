@@ -1,19 +1,15 @@
-app.controller('spamCTRL', function($scope,$rootScope,emailArraysFactory,deleteEmail){
+app.controller('spamCTRL', function($scope,$rootScope,emailArraysFactory,emailOperations){
 
 	// INITIALIZING EMAIL ARRAYS
 	
 
 	$scope.spamArr = emailArraysFactory.spamArr;
 
-	
-
-	$scope.switch = false;
-
 	$scope.delete = function(index,array){
 		var ask = confirm('are you sure?');
 		if (ask === true){
 
-		deleteEmail.remove(index,array);
+		emailOperations.remove(index,array);
 		}
 		
 		else{
@@ -21,10 +17,6 @@ app.controller('spamCTRL', function($scope,$rootScope,emailArraysFactory,deleteE
 		}
 		
 	}
-	
-	
-
-
 
 $scope.readMail = function(author,subject,date,content,backLink){
 		
