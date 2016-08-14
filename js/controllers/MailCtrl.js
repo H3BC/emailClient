@@ -1,4 +1,4 @@
-app.controller('MailCtrl', function($scope,$rootScope,emailArraysFactory,provideTime){
+app.controller('MailCtrl', function($scope,$rootScope,emailArraysFactory,provideTime,deleteEmail){
 
 	// INITIALIZING EMAIL ARRAYS
 	$scope.receivedArr = emailArraysFactory.receivedArr;
@@ -11,8 +11,6 @@ app.controller('MailCtrl', function($scope,$rootScope,emailArraysFactory,provide
 
 	$scope.switch = false;
 
-
-	
 	
 	$scope.sendMail = function(){
 		

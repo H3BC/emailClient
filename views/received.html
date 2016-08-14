@@ -1,9 +1,10 @@
-<ul ng-repeat="email in receivedArr">
+<ul ng-repeat="email in receivedArr track by $index">
 			<li class="emailList content">
+
 				From: {{email.author}} <br>
 				{{email.date}}<br>
 				{{email.subject}}<br>
 				<a href="#/message" class="btn btn-sm btn-info" ng-click="readMail(email.author,email.subject,email.date,email.content,'#/received')" >Read</a>
-				<div class="btn btn-sm btn-danger btnscd">Delete</div>
+				<div class="btn btn-sm btn-danger btnscd" ng-click="delete($index,'receivedArr')">Delete</div>
 			</li>
 </ul>

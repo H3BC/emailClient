@@ -1,9 +1,9 @@
-<ul ng-repeat="email in spamArr">
+<ul ng-repeat="email in spamArr track by $index">
 			<li class="emailList content">
 				From: {{email.author}} <br>
 				{{email.date}}<br>
 				{{email.subject}}<br>
 				<a href="#/message" class="btn btn-sm btn-info" ng-click="readMail(email.author,email.subject,email.date,email.content,'#/spam')">Read</a>
-				<div class="btn btn-sm btn-danger btnscd">Delete</div>
+				<div class="btn btn-sm btn-danger btnscd" ng-click="delete($index,'spamArr')">Delete</div>
 			</li>
 </ul>
