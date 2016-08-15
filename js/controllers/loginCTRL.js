@@ -1,4 +1,4 @@
-app.controller('loginCTRL', function($scope,$cookies,$window){
+app.controller('loginCTRL', function($scope,$window){
 
 	
 	$scope.signIn = function(){
