@@ -5,95 +5,30 @@
 	<title>Mail Client</title>
 	
 	<link rel="stylesheet" href="/styles/bootstrap.min.css">
-	<link rel="stylesheet" href="/styles/myStyles.css">
-
-
-
+	<link rel="stylesheet" href="/styles/loginStyles.css">
 	
 	</head>
-	<body ng-app="emailApp">
+	<body ng-app="emailApp" ng-controller="loginCTRL">
 		
-	<header ng-controller="MailCtrl">
-	<div class="text-center" id="banner">Email Client</div>
-	<div class="btn btn-md btn-info pull-right" data-toggle="modal" data-target="#emailModal">Write an Email</div>
-
-	<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"  aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Add a message</h4>
-      </div>
-      <div class="modal-body">
-
-     <!--  SENDING MAIL FORM  --> 
-      <form class="form-inline">
-     <label for="#address">To: </label> <input ng-model="SendAuthor" type="text" class="form-control" size="20" id="address">
-     <label for="#topic">Topic: </label> <input  ng-model="SendSubject" type="text" class="form-control" size="20" id="topic"><br>
-     <label for="#textMessage">Message:</label>
-     <textarea id="textMessage" cols="33" rows="4" ng-model="mailContent"></textarea>
-
-     </form>
-      
-      <div class="modal-footer">
-      
-        <button type="button" class="btn btn-default pull-right btn-lg"  data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success pull-left btn-lg" ng-click="sendMail()">Send</button>
-      
-      </div>
-    </div>
-  </div>
-</div>
-	</header>
-
+	<div class="container">
 	<div class="row">
-
-	<!-- LEFT SIDE -->
-		<div id="left-col" class="col-xs-3" ng-controller="DashboardCtrl">
-			<div class="chooseOption">
-			<a href="#/received">
-				<div class="content">
-					<span style="color: black" class="glyphicon glyphicon-folder-open"> Received ({{received.length}})</span> 
-				</div>
-			</a>
-			</div>
-			<div class="chooseOption">
-				<a href="#/sended">
-					<div class="content">
-						<span style="color: black" class="glyphicon glyphicon-envelope"> Sended ({{sended.length}})</span> 
+		<div class="col-sm-6 col-md-4 col-md-offset-4">
+				<span><h2>Sing in for Email Client</h2>
+						<p>(login and password "admin" by default)</p>
+				</span>
+				<form role="form" id="loginForm">
+				<img src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg" class="img-responsive">
+					<div id="formContent">
+						<input type="text" class="form-control" placeholder="login" ng-model="login"><br>
+						<input type="password" class="form-control" placeholder="password" ng-model="password"><br>
+						<button type="submit"  class="btn btn-lg btn-info" ng-click="signIn()">Sign in</button><br><br>
+						<a class="pull-right" data-toggle="tooltip" data-placement="bottom" title="login: admin password: admin">Forgot password?</a>
 					</div>
-				</a>
-			</div>
-			<div class="chooseOption">
-				<a href="#/removed">
-					<div class="content">
-						<span style="color: black" class="glyphicon glyphicon-remove"> Removed ({{removed.length}})</span> 
-					</div>
-				</a>
-			</div>
-			<div class="chooseOption">
-				<a href="#/spam">
-					<div class="content">
-						<span style="color: black" class="glyphicon glyphicon-trash"> SPAM ({{spam.length}})</span> 
-					</div>
-				</a>
-			</div>
-			<div class="chooseOption">
-				<a href="#">
-					<div class="content">
-						<span style="color: black" ng-click="info()" class="glyphicon glyphicon-cog"> Settings</span> 
-					</div>
-				</a>
-			</div>
-		</div>
-
-		<!-- RIGHT SIDE -->
-
-		<div id="right-col" ng-view class="col-xs-9">
-		
+				</form>
 			
 		</div>
 	</div>
+</div>
 
 		  <!-- REQUIRED LIBRARIES -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -105,14 +40,8 @@
 
     	<script src="js/app.js"></script>
     	<script src="js/controllers/MailCtrl.js"></script>
-    	<script src="js/controllers/receivedCTRL.js"></script> 
-    	<script src="js/controllers/removedCTRL.js"></script>
-    	<script src="js/controllers/spamCTRL.js"></script>
-    	<script src="js/controllers/sendedCTRL.js"></script>  
-    	<script src="js/controllers/DashboardCtrl.js"></script>
-    	<script src="js/factories/provideTime.js"></script>
-    	<script src="js/factories/emailArraysFactory.js"></script>
-    	<script src="js/factories/emailOperations.js"></script>
+    	<script src="js/controllers/loginCTRL.js"></script>
+		
     	
 
 

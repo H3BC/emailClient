@@ -1,0 +1,24 @@
+    #loginForm{
+      height: 410px;
+      width: 100%;
+      margin-top: 15%;
+      background: #D8EEDE;
+      border-radius: 3%;
+    }
+    #formContent{
+      width: 90%;
+      margin: auto;
+
+    }
+    img{
+      margin: auto;
+      margin-top: -22px;
+    }
+    span{
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+    button{
+      display: block; 
+      width: 100%;
+    }
