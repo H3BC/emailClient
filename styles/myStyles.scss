@@ -79,9 +79,13 @@ textarea {
 .emailList{
 	background: $white;
 	width: 104%;
+	min-height: 50px;
 	.btnscd{
 		margin-left: 10px;
 
+	}
+	span{
+		font-size: 2.5rem;
 	}
 
 }

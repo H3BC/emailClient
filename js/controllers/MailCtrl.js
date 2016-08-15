@@ -70,6 +70,8 @@ app.controller('MailCtrl', function($scope,$rootScope,emailArraysFactory,provide
 
 	}
 
+	
+
 
 
 });
