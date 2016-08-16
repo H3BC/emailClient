@@ -63,10 +63,13 @@ app.controller('MailCtrl', function($scope,$rootScope,emailArraysFactory,provide
 
 	$scope.readMail = function(author,subject,date,backLink){
 		
-		$rootScope.author = author;
-		$rootScope.subject = subject;
-		$rootScope.date = date;
-		$rootScope.backLink = backLink;
+		$rootScope.messageDetails = {
+			author: author,
+			subject: subject,
+			date: date,
+			content: content,
+			backLink: backLink,
+			}
 
 	}
 

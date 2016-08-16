@@ -8,11 +8,13 @@ app.controller('removedCTRL', function($scope,$rootScope,emailArraysFactory){
 
 	$scope.readMail = function(author,subject,date,content,backLink){
 		
-		$rootScope.author = author;
-		$rootScope.subject = subject;
-		$rootScope.date = date;
-		$rootScope.content = content;
-		$rootScope.backLink = backLink;
+			$rootScope.messageDetails = {
+			author: author,
+			subject: subject,
+			date: date,
+			content: content,
+			backLink: backLink,
+			}
 
 	}
 
