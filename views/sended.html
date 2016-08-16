@@ -7,7 +7,7 @@
 				From: {{email.author}} <br>
 				{{email.date}}<br>
 				{{email.subject}}<br>
-				<a href="#/message" class="btn btn-sm btn-info" ng-click="readMail(email.author,email.subject,email.date,email.content,'#/sended')" >Read</a>
+				<a href="#/message" class="btn btn-sm btn-info" ng-click="readMail(email.author,email.subject,email.date,email.content,'#/sended',$index, 'sendedArr')" >Read</a>
 				<div class="btn btn-sm btn-danger btnscd" ng-click="delete($index,'sendedArr')">Delete</div>
 			</li>
 </ul>

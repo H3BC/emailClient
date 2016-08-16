@@ -19,16 +19,15 @@ app.controller('receivedCTRL', function($scope,$rootScope,emailArraysFactory, em
 	}
 	
 	
-	$scope.readMail = function(author,subject,date,content,backLink,index,array){
+	$scope.readMail = function(author,subject,date,content,backLink,index,arrayName){
 		
 		$rootScope.author = author;
 		$rootScope.subject = subject;
 		$rootScope.date = date;
 		$rootScope.content = content;
-		$rootScope.index = index;
-		$rootScope.array = array;
 		$rootScope.backLink = backLink;
-		
+		$rootScope.index = index;
+		$rootScope.array = arrayName;
 
 	}
 

@@ -14,7 +14,7 @@ app.controller('MailCtrl', function($scope,$rootScope,emailArraysFactory,provide
 	$scope.spam = function(index,array){
 		var ask = confirm('are you sure?');
 		if (ask === true){
-
+			
 		emailOperations.sendToSpam(index,array);
 		}
 		
