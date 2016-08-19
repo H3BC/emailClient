@@ -1,16 +1,13 @@
 <div ng-show="receivedArr.length == 0" class="emailList content">
-	<center><span>No new messeges</span></center>
+    <center><span>No new messeges</span></center>
 </div>
-
-
-
 <ul ng-repeat="email in receivedArr track by $index">
-			<li ng-leve class="emailList content">
-
-				From: {{email.author}} <br>
-				{{email.date}}<br>
-				{{email.subject}}<br>
-				<a href="#/message" class="btn btn-sm btn-info" ng-click="readMail(email.author,email.subject,email.date,email.content,'#/received',$index,'receivedArr')" >Read</a>
-				<div class="btn btn-sm btn-danger btnscd" ng-click="delete($index,'receivedArr')">Delete</div>
-			</li>
+    <li ng-leve class="emailList content">
+        From: {{email.author}}
+        <br> {{email.date}}
+        <br> {{email.subject}}
+        <br>
+        <a href="#/message" class="btn btn-sm btn-info" ng-click="readMail(email.author,email.subject,email.date,email.content,'#/received',$index,'receivedArr')">Read</a>
+        <div class="btn btn-sm btn-danger btnscd" ng-click="delete($index,'receivedArr')">Delete</div>
+    </li>
 </ul>

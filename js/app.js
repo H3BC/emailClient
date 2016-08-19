@@ -1,40 +1,62 @@
-var app = angular.module('emailApp', ['ngRoute'])
+var app = angular.module('emailApp', ['ui.router'])
 
-app.config(function($routeProvider){
-	$routeProvider
-	.when('/',{
-		templateUrl: '/views/received.html',
-		controller: 'receivedCTRL'
-	})
-	.when('/recived', {
-		templateUrl: '/views/received.html' ,
-		controller: 'receivedCTRL'
-		
-		 })
-	.when('/sended', {
-		templateUrl: '/views/sended.html',
-		controller: 'sendedCTRL' 
-		
-		 })
-	.when('/spam', {
-		templateUrl: '/views/spam.html',
-		controller: 'spamCTRL' 
-		
-		 })
-	.when('/removed', {
-		templateUrl: '/views/removed.html',
-		controller: 'removedCTRL' 
-		
-		 })
-	.when('/message', {
-		templateUrl: '/views/FullMessage.html',
-		controller: 'MailCtrl' 
-		
-		 })
+app.config(function($stateProvider, $urlRouterProvider) {
 
-	.otherwise({
-		redirectTo: '/'
-	});
+	$stateProvider
+		.state('home', {
+			url: '/',
+			views: {
+				'@': {
+					templateUrl: '/views/login.html',
+					controller: 'loginCTRL'
+				}
+			}
+		})
+		.state('received', {
+			url: '/received',
+			views: {
+				'@': {
+					templateUrl: '/views/received.html',
+					controller: 'receivedCTRL'
+				}
+			}
+		})
+		.state('sended', {
+			url: '/sended',
+			views: {
+				'@': {
+					templateUrl: '/views/sended.html',
+					controller: 'sendedCTRL'
+				}
+			}
+		})
+		.state('removed', {
+			url: '/removed',
+			views: {
+				'@': {
+					templateUrl: '/views/removed.html',
+					controller: 'removedCTRL'
+				}
+			}
+		})
+		.state('spam', {
+			url: '/spam',
+			views: {
+				'@': {
+					templateUrl: '/views/spam.html',
+					controller: 'spamCTRL'
+				}
+			}
+		})
+		.state('message', {
+			url: '/message',
+			views: {
+				'@': {
+					templateUrl: '/views/FullMessage.html',
+					controller: 'MailCtrl'
+				}
+			}
+		});
 
+	$urlRouterProvider.otherwise('/');
 });
-

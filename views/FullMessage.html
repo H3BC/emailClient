@@ -1,31 +1,37 @@
 <div id="emailContent">
-	<div id="emailDetails">
-	<br>
-	From: {{messageDetails.author}}<br>
-	{{messageDetails.subject}}<br>
-	{{messageDetails.date}}<br><br>
-	<button class="btn btn-md btn-success" ng-click="switch = true">Reply</button>&nbsp
-	<a ng-href={{messageDetails.backLink}} class="btn btn-md btn-danger" ng-click="delete(messageDetails.index,messageDetails.arrayName)">Delete</a>
-	<a ng-href={{messageDetails.backLink}} class="btn btn-md btn-warning pull-right" ng-show="backLink != '#/spam'" ng-click="spam(messageDetails.index,messageDetails.arrayName)">Mark as a spam</a>
-	<br><br>
-
-	</div>
-	<div id="emailText">
-		{{messageDetails.content}}
-	</div>
-	<br><br><br>
-	<div id="replyEmail" ng-show="switch">
-	<label for="#sendTo">To:</label><input type="text" class="form-control" id="sendTo" value="{{messageDetails.author}}" disabled>
-	<label for="#mailTopic">Subject:</label><input type="text" class="form-control" id="mailTopic" value="Re: {{messageDetails.subject}}">
-	<br>
-	<textarea cols="100" rows="7"></textarea>
-	<br>
-	<br>
-	<button class="btn btn-md btn-success">Send</button>&nbsp &nbsp<button class="btn btn-md btn-default" ng-click="switch=false">Cancel</button>
-	</div>
-	
-<div id="messageBottom">
-<br><br>
-<a ng-href={{messageDetails.backLink}} class="btn btn-md btn-info">↵ Back</a>
-</div>
+    <div id="emailDetails">
+        <br> From: {{messageDetails.author}}
+        <br> {{messageDetails.subject}}
+        <br> {{messageDetails.date}}
+        <br>
+        <br>
+        <button class="btn btn-md btn-success" ng-click="switch = true">Reply</button>&nbsp
+        <a ng-href={{messageDetails.backLink}} class="btn btn-md btn-danger" ng-click="delete(messageDetails.index,messageDetails.arrayName)">Delete</a>
+        <a ng-href={{messageDetails.backLink}} class="btn btn-md btn-warning pull-right" ng-show="backLink != '#/spam'" ng-click="spam(messageDetails.index,messageDetails.arrayName)">Mark as a spam</a>
+        <br>
+        <br>
+    </div>
+    <div id="emailText">
+        {{messageDetails.content}}
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="replyEmail" ng-show="switch">
+        <label for="#sendTo">To:</label>
+        <input type="text" class="form-control" id="sendTo" value="{{messageDetails.author}}" disabled>
+        <label for="#mailTopic">Subject:</label>
+        <input type="text" class="form-control" id="mailTopic" value="Re: {{messageDetails.subject}}">
+        <br>
+        <textarea cols="100" rows="7"></textarea>
+        <br>
+        <br>
+        <button class="btn btn-md btn-success">Send</button>&nbsp &nbsp
+        <button class="btn btn-md btn-default" ng-click="switch=false">Cancel</button>
+    </div>
+    <div id="messageBottom">
+        <br>
+        <br>
+        <a ng-href={{messageDetails.backLink}} class="btn btn-md btn-info">↵ Back</a>
+    </div>
 </div>
