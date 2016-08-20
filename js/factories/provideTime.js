@@ -1,8 +1,6 @@
-
-
-app.factory('provideTime', function(){
+app.factory('provideTime', function() {
 	var obj = {};
-	obj.getCurrentDate = function(){
+	obj.getCurrentDate = function() {
 		var curDate = new Date();
 		var year = curDate.getFullYear()
 		var month = curDate.getMonth();
@@ -16,7 +14,7 @@ app.factory('provideTime', function(){
 			case 1:
 				month = "Febuary"
 				break;
-			case 2:				
+			case 2:
 				month = "March"
 				break;
 			case 3:
@@ -47,14 +45,14 @@ app.factory('provideTime', function(){
 				month = "December"
 				break;
 		}
-		if (minutes < 10){
+		if (minutes < 10) {
 			minutes = "0" + minutes;
 		}
-		if (hours < 10){
+		if (hours < 10) {
 			hours = "0" + hours;
 		}
 
-	
+
 		return year + ", " + day + " " + month + ", " + hours + ":" + minutes;
 	}
 	return obj;
