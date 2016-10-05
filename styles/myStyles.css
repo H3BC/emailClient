@@ -27,10 +27,10 @@ textarea {
   padding: 0;
   margin: -10px 0 0 0;
   height: 100vh;
-  background: #f3bb40; }
+  background: #01c4ff; }
 
 #left-col {
-  border-right: 1px solid #f2b632; }
+  border-right: 1px solid #00b9f1; }
   #left-col .content {
     padding-left: 25px;
     padding-top: 8%;
@@ -45,14 +45,14 @@ textarea {
 
 .chooseOption {
   height: 75px;
-  background: #e3a00e;
+  background: #0092be;
   width: 100%;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s; }
   .chooseOption:hover {
-    background: #f5c762; }
+    background: #25ccff; }
 
 .emailList {
   background: #FFFFFF;
