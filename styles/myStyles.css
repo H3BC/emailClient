@@ -1,23 +1,91 @@
-/*
-Errno::ENOENT: No such file or directory - myStyles.csscss
+li {
+  list-style: none;
+  margin-left: -39px;
+  border-bottom: 1px dotted black; }
 
-Backtrace:
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `read'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - myStyles.csscss"; }
+header {
+  height: 100px;
+  width: 100%;
+  font-size: 2.8rem;
+  background: #252839;
+  color: #FFFFFF; }
+  header .btn {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-right: 25px; }
+
+textarea {
+  resize: none; }
+
+#banner {
+  padding-top: 15px;
+  vertical-align: middle; }
+
+#left-col, #right-col {
+  padding: 0;
+  margin: -10px 0 0 0;
+  height: 100vh;
+  background: #01c4ff; }
+
+#left-col {
+  border-right: 1px solid #00b9f1; }
+  #left-col .content {
+    padding-left: 25px;
+    padding-top: 8%;
+    font-size: 21px;
+    text-align: center; }
+
+#right-col {
+  background: #dcdcdd;
+  overflow: scroll; }
+  #right-col .content {
+    padding: 10px; }
+
+.chooseOption {
+  height: 75px;
+  background: #0092be;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+  .chooseOption:hover {
+    background: #25ccff; }
+
+.emailList {
+  background: #FFFFFF;
+  width: 104%;
+  min-height: 50px; }
+  .emailList .btnscd {
+    margin-left: 10px; }
+  .emailList span {
+    font-size: 2.5rem; }
+
+.modal-content {
+  color: black; }
+  .modal-content label {
+    font-size: 15px; }
+  .modal-content input {
+    height: 20px; }
+    .modal-content input #address {
+      width: 100px; }
+    .modal-content input #subject {
+      width: 10px; }
+
+#emailContent {
+  padding: 20px;
+  padding-top: 55px; }
+  #emailContent #emailDetails {
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black; }
+  #emailContent #emailText {
+    padding-top: 15px; }
+  #emailContent #replyEmail {
+    width: 45%;
+    padding-bottom: 30px; }
+  #emailContent #messageBottom {
+    border-top: 1px dotted black; }
+
+/*# sourceMappingURL=myStyles.css.map */

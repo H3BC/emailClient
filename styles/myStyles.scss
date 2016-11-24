@@ -1,44 +1,132 @@
-/*
-Error: Invalid property: "Backtrace:" (no value).
-        on line 4 of myStyles.css
+$color-left: #00b9f1;
+$color-right: #b5b5b7;
+$color-head: #252839;
+$white: #FFFFFF;
 
-1: /*
-2: Errno::ENOENT: No such file or directory - myStyles.csscss
-3: 
-4: Backtrace:
-5: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `read'
-6: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'
-7: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-8: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-9: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+@mixin transition($time){
+	-webkit-transition: all $time;
+    -moz-transition: all $time;
+    -o-transition: all $time;
+    transition: all $time;
+}
 
-Backtrace:
-myStyles.css:4
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:733:in `parse_property'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:692:in `parse_property_or_rule'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:658:in `parse_line'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:536:in `build_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:555:in `block in append_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:554:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:554:in `append_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:409:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid property: \"Backtrace:\" (no value).\A         on line 4 of myStyles.css\A \A 1: /*\A 2: Errno::ENOENT: No such file or directory - myStyles.csscss\A 3: \A 4: Backtrace:\A 5: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `read'\A 6: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'\A 7: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'\A 8: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'\A 9: /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'"; }
+li{
+	list-style: none;
+ 	margin-left: -39px;
+ 	border-bottom: 1px dotted black;
+}
+
+header{
+	height: 100px;
+	width: 100%;
+	font-size: 2.8rem;
+	background: $color-head;
+	color: $white;
+	.btn{
+		@include transition(0.5s);
+		margin-right: 25px;
+	}
+}
+
+textarea {
+   resize: none;
+}
+
+#banner{
+	padding-top: 15px;
+  	vertical-align: middle;
+  	
+}
+
+#left-col, #right-col{
+	padding: 0;
+	margin: -10px 0 0 0;
+	height: 100vh;
+	background: lighten($color-left, 3%);
+
+}
+
+#left-col{
+	border-right: 1px solid $color-left;
+	.content{
+		padding-left: 25px;
+		padding-top: 8%;
+		font-size: 21px;
+		text-align: center;
+	}
+}
+
+#right-col{
+	background: lighten($color-right,15%);
+	overflow: scroll;
+	.content{
+		padding: 10px;
+	}
+}
+.chooseOption{
+	height: 75px;
+	background: darken($color-left, 10%);
+	width: 100%;
+
+	@include transition(0.5s);
+
+	&:hover{
+		background: lighten($color-left, 10%);
+	};
+
+}
+
+.emailList{
+	background: $white;
+	width: 104%;
+	min-height: 50px;
+	.btnscd{
+		margin-left: 10px;
+
+	}
+	span{
+		font-size: 2.5rem;
+	}
+
+}
+
+.modal-content{
+	color: black;
+	label{
+		font-size: 15px;
+	}
+	input{
+		height: 20px;
+		
+		#address{
+			width: 100px;
+		}
+		#subject{
+		 	width: 10px;
+		}
+
+	}
+}
+
+#emailContent{
+	padding: 20px;
+	padding-top: 55px;
+
+	#emailDetails{
+
+		border-top: 1px dotted black;
+		border-bottom: 1px dotted black;
+	}
+
+	#emailText{
+		padding-top: 15px;
+	}
+
+	#replyEmail{
+		width: 45%;
+		padding-bottom: 30px;
+	}
+	#messageBottom{
+		border-top: 1px dotted black;
+	}
+}
