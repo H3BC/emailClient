@@ -7,8 +7,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: '/',
 			views: {
 				'@': {
-					templateUrl: '/views/login.html',
-					controller: 'loginCTRL'
+					templateUrl: '/views/received.html',
+					controller: 'receivedCTRL'
 				}
 			}
 		})

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header data-ng-if="$root.isLoggedIn" ng-controller="MailCtrl">
+    <header ng-controller="MailCtrl">
         <div class="text-center" id="banner">Email Client</div>
         <div class="btn btn-md btn-info pull-right" data-toggle="modal" data-target="#emailModal">Write an Email</div>
         <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -41,7 +41,7 @@
     </header>
     <div class="row">
         <!-- LEFT SIDE -->
-        <div id="left-col" class="col-xs-3" ng-controller="DashboardCtrl" data-ng-if="$root.isLoggedIn">
+        <div id="left-col" class="col-xs-3" ng-controller="DashboardCtrl">
             <div class="chooseOption">
                 <a ui-sref="received">
                     <div class="content">
